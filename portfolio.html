@@ -1,0 +1,13 @@
+---
+layout: page
+title: Portfólio
+---
+
+{% for drawing in site.drawings %}
+
+<div class="drawing">
+<h2><img src="{{ drawing.image_path }}" alt="{{ drawing.title }}" />{{ drawing.title }} </h2>
+{{ drawing.content }}
+</div>
+
+{% endfor %}
