@@ -1,14 +1,11 @@
-docs_list_title: Navegação
-docs:
+- title: About
+  url: about.html
 
-- title: Instagram
-  url: https://www.instagram.com/cats_of_instagram/
-  image_path: https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png
+- title: Portfólio
+  url: portfolio.html
 
-- title: Twitter
-  url: https://twitter.com/ShouldHaveCat
-  image_path: https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-4.png
+- title: Drawings
+  url: drawings.html
 
-- title: LinkedIn
-  url: https://www.linkedin.com/company/cats-protection/
-  image_path: https://image.flaticon.com/icons/png/512/174/174857.png
+- title: Contacts
+  url: contacts.html
