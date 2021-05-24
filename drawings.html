@@ -1,13 +1,19 @@
 ---
-layout: page
+layout: drawing
 title: Drawings
 ---
 
-{% for drawing in site.drawings %}
+{% for drawing in site.drawings reversed %}
 
 <div class="drawing">
-<h2><img src="{{ drawing.image_path }}" alt="{{ drawing.title }}" />{{ drawing.title }} </h2>
-{{ drawing.content }}
+    <h2>{{ drawing.title }}</h2>
+    <p><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ drawing.date | date: date_format }}
+      </time></p>
+    {{ drawing.content }}
+    <img src="{{ drawing.image_path }}" alt="{{ drawing.title }}" />
+
 </div>
 
 {% endfor %}

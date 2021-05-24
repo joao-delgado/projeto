@@ -33,6 +33,8 @@ plugins:
   - jekyll-feed
 collections: 
   drawings:
+  projects:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
