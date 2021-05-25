@@ -3,11 +3,11 @@ layout: page
 title: Portfolio
 ---
 
-{% for drawing in site.drawings %}
+{% for project in site.projects %}
 
-<div class="drawing">
-<h2><img src="{{ drawing.image_path }}" alt="{{ drawing.title }}" />{{ drawing.title }} </h2>
-{{ drawing.content }}
+<div class="project">
+<h2>{{ project.title }}</h2>
+{{ project.content }}
 </div>
 
 {% endfor %}

@@ -1,15 +1,15 @@
 
 - title: Behance
   url: https://www.behance.net/joaodelgado
-  icon: assets/icons/be.svg
+  icon_path: assets/icons/be.svg
   size: 20px 
 
 - title: LinkedIn
   url: https://www.linkedin.com/in/joao-delgado/
-  icon: assets/icons/in.svg
+  icon_path: assets/icons/in.svg
   size: 20px 
 
 - title: Instagram
   url: https://www.instagram.com/delgado.sans/
-  icon: assets/icons/ig.svg
+  icon_path: assets/icons/ig.svg
   size: 20px 
