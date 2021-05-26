@@ -1,8 +1,80 @@
 ---
 layout: page
 title: About
+profile_picture: assets/images/about/Joao_Delgado.jpg
 ---
 
-Hi! I’m João Delgado and I'm a communication and web designer based in Lisbon, Portugal with a Communication Design degree in the Lisbon’s Fine Arts Faculty.
+<section class="about-me">
+    <figure>
+        <img src="{{ page.profile_picture }}" alt="Profile picture of me">
+    </figure>
+    <p>Hi! I’m João Delgado and I'm a communication and web designer based in Lisbon, Portugal with a Communication Design degree in the Lisbon’s Fine Arts Faculty.</p>
+    <p>I’m amazed with the world of arts and how it meets with the world of technology. I’m always looking for ways to develop my critical spirit skills and, as a designer, I’m very interested to find how can I create an improved experience with the world, through the tools that I have now available.</p>
+</section>
 
-I’m amazed with the world of arts and how it meets with the world of technology. I’m always looking for ways to develop my critical spirit skills and, as a designer, I’m very interested to find how can I create an improved experience with the world, through the tools that I have now available.
+<section class="education">
+    {% for course in site.data.data-education %}
+    <li><p>{{ course.name }}</p>
+        <p>{{ course.school }}</p>
+        <p>{{ course.date }}</p>
+    </li> 
+    {% endfor %}
+</section>
+
+<section class="skills">
+
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="soft">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>
+                    <p>Team work</p>
+                    <p class="rate">5/5</p>
+                </li>
+                <li>
+                    <p>Critical mindset</p>
+                    <p class="rate">5/5</p>
+                </li>
+                <li>
+                    <p>Creativity</p>
+                    <p class="rate">4/5</p>
+                </li>
+                <li>
+                    <p>Communication</p>
+                    <p class="rate">4/5</p>
+                </li>
+                <li>
+                    <p>Leadership</p>
+                    <p class="rate">3/5</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hard">
+            <h3>Hard Skills</h3>
+            <ul>
+                <li>
+                    <p>Adobe Illustrator</p>
+                    <p class="rate">5/5</p>
+                </li>
+                <li>
+                    <p>Adobe Photoshop</p>
+                    <p class="rate">4/5</p>
+                </li>
+                <li>
+                    <p>Figma</p>
+                    <p class="rate">4/5</p>
+                </li>
+                <li>
+                    <p>Html, Css & Javascript</p>
+                    <p class="rate">3/5</p>
+                </li>
+                <li>
+                    <p>Adobe InDesign</p>
+                    <p class="rate">3/5</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
