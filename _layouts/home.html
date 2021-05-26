@@ -10,32 +10,31 @@ layout: default
   {{ content }}
 
   {%- if site.projects.size > 0 -%}
-    <h2>{{ page.list_title | default: "Projects" }}</h2>
-      <ul>
-        {% for project in site.projects %}
+  <h2>{{ page.list_title | default: "Projects" }}</h2>
+  <ul>
+    {% assign projects = site.projects | sort: 'date' | reverse %}
 
-        {%- include project-thumb.html -%}
-
-        {% endfor %}
-      </ul>
-      {% else %}
-        <h2>{{ page.list_title | default: "Projects" }}</h2>
-        <p>Coming soon!</p>
+    {% for project in projects %}
+      {%- include project-thumb.html -%}
+    {% endfor %}
+  </ul>
+  {% else %}
+  <h2>{{ page.list_title | default: "Projects" }}</h2>
+  <p>Coming soon!</p>
   {%- endif -%}
 
   {%- if site.drawings.size > 0 -%}
-  <div class="latest-drawings">
+    <div class="latest-drawings">
+      <h2>Latest Drawings</h2>
 
-    <h2>Latest Drawings</h2>
+      {% assign drawings = site.drawings | sort: 'date' | reverse %}
 
-    <!-- {% assign drawing = site.drawings | sort: 'date' | reversed %} -->
+      {% for drawing in drawings limit: 3 %}
+      <img src="{{ drawing.image_path }}" alt="{{ drawing.title }}" />
+      {% endfor %}
+      <a href="{{ drawing.permalink }}">View all drawings</a>
 
-    {% for drawing in site.drawings limit: 3 %}
-
-    <p>{{ drawing.title }}</p>
-    {% endfor %}
-
-  </div>
+    </div>
   {% endif %}
 
 </div>
