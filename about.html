@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About me
 profile_picture: assets/images/about/Joao_Delgado.jpg
 ---
 
@@ -13,12 +13,16 @@ profile_picture: assets/images/about/Joao_Delgado.jpg
 </section>
 
 <section class="education">
-    {% for course in site.data.data-education %}
-    <li><p>{{ course.name }}</p>
-        <p>{{ course.school }}</p>
-        <p>{{ course.date }}</p>
-    </li> 
-    {% endfor %}
+    <h2>Education</h2>
+    <ul>
+        {% for course in site.data.data-education %}
+        <li>
+            <p>{{ course.name }}</p>
+            <p>{{ course.school }}</p>
+            <p>{{ course.date }}</p>
+        </li> 
+        {% endfor %}
+    </ul>
 </section>
 
 <section class="skills">
@@ -29,23 +33,23 @@ profile_picture: assets/images/about/Joao_Delgado.jpg
             <h3>Soft Skills</h3>
             <ul>
                 <li>
-                    <p>Team work</p>
+                    <h4>Team work</h4>
                     <p class="rate">5/5</p>
                 </li>
                 <li>
-                    <p>Critical mindset</p>
+                    <h4>Critical mindset</h4>
                     <p class="rate">5/5</p>
                 </li>
                 <li>
-                    <p>Creativity</p>
+                    <h4>Creativity</h4>
                     <p class="rate">4/5</p>
                 </li>
                 <li>
-                    <p>Communication</p>
+                    <h4>Communication</h4>
                     <p class="rate">4/5</p>
                 </li>
                 <li>
-                    <p>Leadership</p>
+                    <h4>Leadership</h4>
                     <p class="rate">3/5</p>
                 </li>
             </ul>
@@ -55,23 +59,23 @@ profile_picture: assets/images/about/Joao_Delgado.jpg
             <h3>Hard Skills</h3>
             <ul>
                 <li>
-                    <p>Adobe Illustrator</p>
+                    <h4>Adobe Illustrator</h4>
                     <p class="rate">5/5</p>
                 </li>
                 <li>
-                    <p>Adobe Photoshop</p>
+                    <h4>Adobe Photoshop</h4>
                     <p class="rate">4/5</p>
                 </li>
                 <li>
-                    <p>Figma</p>
+                    <h4>Figma</h4>
                     <p class="rate">4/5</p>
                 </li>
                 <li>
-                    <p>Html, Css & Javascript</p>
+                    <h4>Html, Css & Javascript</h4>
                     <p class="rate">3/5</p>
                 </li>
                 <li>
-                    <p>Adobe InDesign</p>
+                    <h4>Adobe InDesign</h4>
                     <p class="rate">3/5</p>
                 </li>
             </ul>

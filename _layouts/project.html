@@ -3,22 +3,42 @@ layout: default
 ---
 <article class="project">
 
-  <header class="post-header">
-    <h1 class="project-tile">{{ page.title | escape }}</h1>
-    <time class="dt-published" datetime="{{ page.date }}" itemprop="Project date">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    <time class="date" datetime="{{ page.date }}" itemprop="Project date">
     {%- assign date_format = site.minima.date_format | default: "%b %Y" -%}
       {{ page.date | date: date_format }}</time>
-    {%- if page.collab -%}
-      <p class="collabs">Collaboration with: {{ page.collab }}</p>
+    {%- if page.collabs -%}
+    <h2>Collaboration with:</h2>
+      <ul>
+        {%- for collab in page.collabs -%}
+          <li class="collabs">{{ collab }}</li>
+        {%- endfor -%}
+      </ul>
     {%- endif -%}
     <video class="project-video" autoplay loop muted>
-      <source src="{{ page.thumbnail_path }}" type="video/mp4">
+      <source src="assets/images/projects/thumbs/{{ page.thumbnail_path }}" type="video/mp4">
     </video>
   </header>
 
   <div class="project-container">
-    {{ content }}
+    <div class="project-description">{{ content }}</div>
+    {%- if page.project_link -%}
+      <a href="{{ page.project_link }}" target="_blank" title="Go to {{ page.title }}">Check {{ page.title }}'s website</a>
+    {%- endif -%}
+    <figure>
+      {%- for image in page.images -%}
+        <img src="assets/images/projects/{{ image.image_path }}" alt="{{ image.image_alt }}">
+      {%- endfor -%}
+    </figure>
   </div>
-  <p><a href="{{ site.baseurl }}/portfolio">back to projects</a></p>
 
+  <div class="more-projects">
+    {% if page.previous.url %}
+      <a class="previous" href="{{page.previous.url | relative_url }}" title="Go to {{page.previous.title}}">< {{page.previous.title}}</a>
+    {% endif %}
+    {% if page.next.url %}
+      <a class="next" href="{{page.next.url | relative_url }}" title="Go to {{page.next.title}}">{{page.next.title}} ></a>
+    {% endif %}
+  </div> 
 </article>

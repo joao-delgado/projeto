@@ -3,9 +3,23 @@ layout: project
 title: PEN-USB/INK
 date: June 2019
 collab: João Lopes — Joana Pedrinho
-description: This is the description of this project
-thumbnail_path: assets/images/projects/thumbs/pen.mp4
 permalink: PEN-USB-INK
+description: This is the description of this project
+thumbnail_path: pen.mp4
+project_link: https://penusbink.github.io/PenUsbInk/index.html
+images:
+  - image_path: pen/PEN-1.jpg
+    image_alt: PEN-INK-USB Magazine's section on desktop and mobile
+  - image_path: pen/PEN-2.jpg
+    image_alt: PEN-INK-USB Magazine's poster
+  - image_path: pen/PEN-3.jpg
+    image_alt: PEN-INK-USB Magazine's homepage on mobile
+  - image_path: pen/PEN-4.jpg
+    image_alt: PEN-INK-USB Magazine's menu on mobile
+  - image_path: pen/PEN-5.jpg
+    image_alt: PEN-INK-USB Magazine's publication cover
+  - image_path: pen/PEN-6.jpg
+    image_alt: PEN-INK-USB Magazine's publication spread
 ---
 
 “PEN-USB/INK” is a periodic magazine that pretends to question the digital/print dichotomy. In three issues (“PEN”, “USB” and “INK”), this magazine aims to think about design through the way people receive and consume information. “PEN” wants to think about journalism and about the way, nowadays, the print media and the digital media must work closely together.
