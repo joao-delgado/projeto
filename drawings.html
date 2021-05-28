@@ -4,9 +4,7 @@ title: Drawings
 permalink: drawings
 estorvo_link: https://www.instagram.com/es.tor.vo/
 ---
-
 {% assign drawings = site.drawings | sort: 'date' | reverse %}
-
 {% for drawing in drawings %}
   <div class="drawing">
     <h2>{{ drawing.title }}</h2>
@@ -15,7 +13,6 @@ estorvo_link: https://www.instagram.com/es.tor.vo/
         {{ drawing.date | date: date_format }}
       </time></p>
     {{ drawing.content }}
-      
   {% if drawing.inspired %}
     <p>Inspired by: {{ drawing.inspired }}</p>
   {% endif %}

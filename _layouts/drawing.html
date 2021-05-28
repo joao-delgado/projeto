@@ -2,13 +2,11 @@
 layout: default
 ---
 <div class="drawings-container">
-
   <header class="drawings-header">
     <h1>{{ page.title | escape }}</h1>
     <p>These drawing series are a part of a project called "Estorvo" that consists of visual experimentations using only black ink on a piece of paper.</p>
     <a href="{{ page.estorvo_link }}" target="_blank" title="Go to Estorvo">Check Estorvo on Instagram</a>
   </header>
-
   {% if page.content %}
     <div class="drawings-content">
       {{ content }}

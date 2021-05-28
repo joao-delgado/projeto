@@ -2,17 +2,16 @@
 layout: default
 ---
 <article class="project">
-
   <header class="project-header">
     <h1>{{ page.title }}</h1>
     <p>
       <time class="date" datetime="{{ page.date }}" itemprop="Project date">
-      {%- assign date_format = site.minima.date_format | default: "%b %Y" -%}
-      {{ page.date | date: date_format }}</time>
+        {%- assign date_format = site.minima.date_format | default: "%b %Y" -%}
+        {{ page.date | date: date_format }}</time>
     </p>
     <ul>
       {% for tag in page.tags %}
-          <li>{{ tag }}</li>
+      <li>{{ tag }}</li>
       {% endfor %}
     </ul>
     <video class="project-video" width="100%" autoplay loop muted>
@@ -20,36 +19,35 @@ layout: default
     </video>
     <p class="project-desc">{{ page.description }}</p>
   </header>
-
   <div class="project-container">
     <div class="project-description">
       <h2>About the project</h2>
       {{ content }}
-    {%- if page.project_link -%}
-      <a href="{{ page.project_link }}" target="_blank" title="Go to {{ page.title }}">Check {{ page.title }}'s website</a>
-    {%- endif -%}
-  </div>
+      {%- if page.project_link -%}
+      <a href="{{ page.project_link }}" target="_blank" title="Go to {{ page.title }}">Check {{ page.title }}'s
+        website</a>
+      {%- endif -%}
+    </div>
     {%- if page.collabs -%}
     <h3>Collaboration with</h3>
-      <ul>
-        {%- for collab in page.collabs -%}
-          <li class="collabs">{{ collab }}</li>
-        {%- endfor -%}
-      </ul>
+    <ul>
+      {%- for collab in page.collabs -%}
+      <li class="collabs">{{ collab }}</li>
+      {%- endfor -%}
+    </ul>
     {%- endif -%}
     <figure>
       {%- for image in page.images -%}
-        <img src="assets/images/projects/{{ image.image_path }}" alt="{{ image.image_alt }}">
+      <img src="assets/images/projects/{{ image.image_path }}" alt="{{ image.image_alt }}">
       {%- endfor -%}
     </figure>
   </div>
-
   <div class="more-projects">
     {% if page.previous.url %}
-      <a class="previous" href="{{ page.previous.url | relative_url }}" title="Go to {{page.previous.title}}">< {{page.previous.title}}</a>
+    <a class="previous" href="{{ page.previous.url | relative_url }}" title="Go to {{page.previous.title}}">
+      < {{page.previous.title}}</a> {% endif %} {% if page.next.url %} <a class="next"
+        href="{{ page.next.url | relative_url }}" title="Go to {{page.next.title}}">{{page.next.title}} >
+    </a>
     {% endif %}
-    {% if page.next.url %}
-      <a class="next" href="{{ page.next.url | relative_url }}" title="Go to {{page.next.title}}">{{page.next.title}} ></a>
-    {% endif %}
-  </div> 
+  </div>
 </article>

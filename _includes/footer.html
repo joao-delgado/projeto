@@ -4,15 +4,15 @@
             <ul class="contact-list">
                 <li class="copyright">©2021 by {{ site.author }}
                 </li>
-                {%- if site.email -%}
-                <li><a class="email" href="mailto:{{ site.email }}" title="Send me an e-mail!">{{ site.email }}</a></li>
-                {%- endif -%}
+                    {%- if site.email -%}
+                        <li><a class="email" href="mailto:{{ site.email }}" title="Send me an e-mail!">{{ site.email }}</a></li>
+                    {%- endif -%}
             </ul>
         </div>
         <div class="socials-container">
             <ul class="socials">
                 {% for item in site.data.data-footer %}
-                <li><img src="{{ item.icon_path | relative_url }}" alt="{{ item.title }} logo" width="{{ item.size }}"><a href="{{ item.url }}" target="_blank" title="Check my {{ item.title }}">{{ item.title }}</a></li> 
+                    <li><img src="{{ item.icon_path | relative_url }}" alt="{{ item.title }} logo" width="{{ item.size }}"><a href="{{ item.url }}" target="_blank" title="Check my {{ item.title }}">{{ item.title }}</a></li> 
                 {% endfor %}
             </ul>
         </div>
