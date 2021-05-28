@@ -2,20 +2,23 @@
 layout: drawing
 title: Drawings
 permalink: drawings
+estorvo_link: https://www.instagram.com/es.tor.vo/
 ---
 
 {% assign drawings = site.drawings | sort: 'date' | reverse %}
 
 {% for drawing in drawings %}
-<div class="drawing">
-  <h3>{{ drawing.title }}</h3>
-  <p><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {{ drawing.date | date: date_format }}
-    </time></p>
+  <div class="drawing">
+    <h2>{{ drawing.title }}</h2>
+    <p><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ drawing.date | date: date_format }}
+      </time></p>
     {{ drawing.content }}
+      
+  {% if drawing.inspired %}
+    <p>Inspired by: {{ drawing.inspired }}</p>
+  {% endif %}
     <img src="{{ drawing.image_path }}" alt="{{ drawing.title }}" />
-
-</div>
-
+  </div>
 {% endfor %}

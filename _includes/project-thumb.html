@@ -1,9 +1,9 @@
 <li>
     <div class="project-thumb">
-        <a href="{{ project.permalink }}" title="Go to {{ project.title }}">{{ project.title }}</a>
+        <a href="{{ project.permalink }}" title="Go to {{ project.title }}"><h3>{{ project.title }}</h3></a>
         <p>{{ project.description }}</p>
         <a href="{{ project.permalink }}">
-            <video class="project-thumbnails" autoplay loop muted>
+            <video class="project-thumbnails" width="100%" autoplay loop muted>
                 <source src="assets/images/projects/thumbs/{{ project.thumbnail_path }}" type="video/mp4">
             </video>
         </a>

@@ -8,16 +8,17 @@ profile_picture: assets/images/about/Joao_Delgado.jpg
     <figure>
         <img src="{{ page.profile_picture }}" alt="Profile picture of me">
     </figure>
-    <p>Hi! I’m João Delgado and I'm a communication and web designer based in Lisbon, Portugal with a Communication Design degree in the Lisbon’s Fine Arts Faculty.</p>
-    <p>I’m amazed with the world of arts and how it meets with the world of technology. I’m always looking for ways to develop my critical spirit skills and, as a designer, I’m very interested to find how can I create an improved experience with the world, through the tools that I have now available.</p>
+    <div class="about-text">
+        <p>Hi! I’m João Delgado and I'm a communication and web designer based in Lisbon, Portugal with a Communication Design degree in the Lisbon’s Fine Arts Faculty.</p>
+        <p>I’m amazed with the world of arts and how it meets with the world of technology. I’m always looking for ways to develop my critical spirit skills and, as a designer, I’m very interested to find how can I create an improved experience with the world, through the tools that I have now available.</p>
+    </div>
 </section>
-
 <section class="education">
     <h2>Education</h2>
     <ul>
         {% for course in site.data.data-education %}
         <li>
-            <p>{{ course.name }}</p>
+            <h3>{{ course.name }}</h3>
             <p>{{ course.school }}</p>
             <p>{{ course.date }}</p>
         </li> 
