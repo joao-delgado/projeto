@@ -1,0 +1,45 @@
+.navigation-bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: $bg-color;
+    z-index: 2;
+    nav {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid 2px $primary-color;
+        justify-content: space-between;
+        padding: 10px;
+    }
+}
+
+.eyes {
+    width: fit-content;
+    text-align: center;
+    display: flex;
+
+    .eye {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background: $bg-color;
+        border: solid 2px $primary-color;
+        position: relative;
+        overflow: hidden;
+        margin-left: 4px;
+    }
+
+    .eye::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translate(-50%, -50%);
+        background: $primary-color;
+        border-radius: 50%;
+      }
+}

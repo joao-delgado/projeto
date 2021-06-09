@@ -1,0 +1,62 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "header header header header"
+      "article article article aside";
+    
+    article {
+        grid-area: article;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+}
+
+.home-header {
+    grid-area: header;
+    h1 {
+        font-size: 3rem;
+        position: relative;
+        width: max-content;
+        font-weight: 600;
+      }
+      
+      h1::before,
+      h1::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      
+      h1::before {
+        background: $bg-color;
+        animation: typewriter $typewriterSpeed
+          steps($typewriterCharacters) 1s forwards;
+      }
+      
+      h1::after {
+        width: 0.3rem;
+        background: $primary-color;
+        animation: typewriter $typewriterSpeed
+            steps($typewriterCharacters) 1s forwards,
+          blink 750ms steps($typewriterCharacters) infinite;
+      }
+
+}
+  
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }

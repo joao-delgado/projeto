@@ -1,5 +1,20 @@
+@function ratio($width, $height) {
+    $ze: $height / $width;
+    @return percentage($ze);
+  }
+
+$bg-color: #fff;
+$primary-color: #00f;
+$secondary-color: #f00;
+
+$font: 'IBM Plex Mono', monospace;
+$text-body: 16px;
+
+$typewriterSpeed: 4s;
+$typewriterCharacters: 12;
 
 
 @import 
     "style/base",
-    "style/navigation";
+    "style/navigation",
+    "style/home";
