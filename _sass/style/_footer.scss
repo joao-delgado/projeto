@@ -1,0 +1,22 @@
+footer {
+    width: 100%;
+    border-top: solid 2px $primary-color;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        fill: $primary-color;
+    }
+
+    a {
+        display: flex;
+        width: max-content;
+        height: 2rem;
+    }
+
+    a:hover svg {
+        fill: $secondary-color;
+    }
+
+}

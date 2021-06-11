@@ -1,16 +1,21 @@
 <header class="navigation-bar">
     <nav>
         <div class="nav-links">
-            <a href="{{ site.baseurl }}/index.html" title="The one and only">{{ site.title }}</a>
+            <a href="{{ site.baseurl }}/index.html" class="nav-title" title="The one and only">{{ site.title }}</a>
             <ul>
                 {% for item in site.data.data-nav %}
-                    <li><a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a></li> 
+                    <li
+                    {% if item.title == page.title %} 
+                        class="nav-link-selected"
+                    {% endif %}>
+                        <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
+                    </li> 
                 {% endfor %}
             </ul>
         </div>
         <div class="eyes">
             <div class="eye"></div>
             <div class="eye"></div>
-          </div>
+        </div>
       </nav>
 </header>

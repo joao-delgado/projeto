@@ -1,20 +1,21 @@
 <footer>
-    <div class="wrapper">
-        <div class="contact-list-container">
-            <ul class="contact-list">
-                <li class="copyright">©2021 by {{ site.author }}
-                </li>
-                    {%- if site.email -%}
-                        <li><a class="email" href="mailto:{{ site.email }}" title="Send me an e-mail!">{{ site.email }}</a></li>
-                    {%- endif -%}
-            </ul>
-        </div>
-        <div class="socials-container">
-            <ul class="socials">
-                {% for item in site.data.data-footer %}
-                    <li><img src="{{ item.icon_path | relative_url }}" alt="{{ item.title }} logo" width="{{ item.size }}"><a href="{{ item.url }}" target="_blank" title="Check my {{ item.title }}">{{ item.title }}</a></li> 
-                {% endfor %}
-            </ul>
-        </div>
+    <div class="contact-list-container">
+        <ul class="contact-list">
+            <li class="copyright">©2021 by {{ site.author }}
+            </li>
+                {%- if site.email -%}
+                    <li><a class="email" href="mailto:{{ site.email }}" title="Send me an e-mail!">{{ site.email }}</a></li>
+                {%- endif -%}
+        </ul>
+    </div>
+    <div class="socials-container">
+        <ul class="socials">
+            {% for item in site.data.data-footer %}
+                <li>
+                    <a href="{{ item.url }}" target="_blank" title="Check my {{ item.title }}">
+                    <svg alt="{{ item.title }} logo" viewBox="0 0 40 40">{{ item.icon_path }}</svg>
+                    {{ item.title }}</a></li> 
+            {% endfor %}
+        </ul>
     </div>
 </footer>
