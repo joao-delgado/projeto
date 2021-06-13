@@ -17,35 +17,7 @@ nav {
     padding: $s-spacing;
     
     ul {
-        display: flex;
-        flex-wrap: wrap;
-        li {
-            margin-right: $m-spacing;
-            position: relative;
-
-            a {
-                text-decoration: none;
-            }
-        }
-
-        li:last-child {
-            margin-right: 0px;
-        }
-        li::after {
-            content: '';
-            position: absolute;
-            bottom: 8px;
-            right: -12px;
-            width: 4px;
-            height: 4px;
-            background-color: $primary-color;
-            border-radius: 4px;
-        }
-        li:last-child::after {
-            content: '';
-            width: 0px;
-            height: 0px;
-        }
+        @include inline-list
     }
 }
 

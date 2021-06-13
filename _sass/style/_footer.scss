@@ -1,11 +1,13 @@
 footer {
     width: 100%;
     border-top: solid 2px $primary-color;
+    margin-top: $l-spacing;
+    font-size: $text-body-s;
 
     svg {
         width: 20px;
         height: 20px;
-        margin-right: 10px;
+        margin-right: $s-spacing;
         fill: $primary-color;
     }
 
@@ -13,10 +15,27 @@ footer {
         display: flex;
         width: max-content;
         height: 2rem;
+        text-decoration: none;
     }
 
     a:hover svg {
         fill: $secondary-color;
+    }
+
+    .socials-container {
+        @media (min-width: 480px) {
+            ul {
+                display: flex;
+            }
+
+            li {
+                margin-left: $m-spacing;
+            }
+
+            li:first-child {
+                margin-left: 0;
+            }
+        }
     }
 
 }

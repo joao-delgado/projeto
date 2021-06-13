@@ -1,0 +1,25 @@
+.portfolio-projects {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.portfolio-thumb {
+    @media (min-width: 480px) {
+        width: 33.333333%;
+    }
+}
+
+.portfolio-tags {
+    @include inline-list();
+    li {
+
+        margin-bottom: $m-spacing;
+        line-height: 1rem;
+    }
+}
+
+.portfolio-proj-desc {
+    font-size: $text-body-l;
+}

@@ -14,7 +14,7 @@ body {
     align-items: center;
     background-color: $bg-color;
     font-family: $text-font;
-    font-size: $text-body;
+    font-size: $text-body-m;
     margin: 0;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
@@ -52,9 +52,14 @@ h1 {
   font-weight: 600;
 }
 
-h1 {
+h2 {
   font-size: $text-h2;
   font-weight: 600;
+}
+
+h3 {
+  font-size: $text-h3;
+  font-weight: 400;
 }
 
 a {
@@ -74,5 +79,6 @@ figure {
 }
 
 video {
+    width: 100%;
     display: block;
 }

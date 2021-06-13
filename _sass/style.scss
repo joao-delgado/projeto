@@ -8,11 +8,14 @@ $primary-color: #00f;
 $secondary-color: #f00;
 
 $text-font: 'IBM Plex Mono', monospace;
-$text-body: 1rem;
+
+$text-display: 3rem;
 $text-h1: 2rem;
 $text-h2: 1.5rem;
-$text-display: 3rem;
-
+$text-h3: 1.2rem;
+$text-body-l: 1.2rem;
+$text-body-m: 1rem;
+$text-body-s: 0.8rem;
 
 $typewriterSpeed: 4s;
 $typewriterCharacters: 12;
@@ -21,6 +24,39 @@ $s-spacing: 10px;
 $m-spacing: 20px;
 $l-spacing: 40px;
 
+@mixin inline-list {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    margin-right: $m-spacing;
+    position: relative;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  li:last-child {
+      margin-right: 0px;
+  }
+
+  li::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    right: -12px;
+    width: 4px;
+    height: 4px;
+    background-color: $primary-color;
+    border-radius: 4px;
+  }
+
+  li:last-child::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+  }
+}
 
 @import 
     "style/base",
