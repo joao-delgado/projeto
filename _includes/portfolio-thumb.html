@@ -1,7 +1,12 @@
 <li>
-    <div class="project-thumb">
-        <h3><a href="{{ project.permalink }}" title="Go to {{ project.title }}">{{ project.title }}</a></h3>
+    <div class="portfolio-thumb">
+        <h2><a href="{{ project.permalink }}" title="Go to {{ project.title }}">{{ project.title }}</a></h2>
         <p>{{ project.description }}</p>
+        <ul>
+            {% for tag in project.tags %}
+            <li>{{ tag }}</li>
+            {% endfor %}
+        </ul>
         <a href="{{ project.permalink }}">
             <video class="project-thumbnails" width="100%" autoplay loop muted>
                 <source src="assets/images/projects/thumbs/{{ project.thumbnail_path }}" type="video/mp4">

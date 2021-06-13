@@ -3,9 +3,9 @@ layout: page
 title: Portfolio
 permalink: portfolio
 ---
-<ul class="portfolio-thumbs">
+<ul class="portfolio-projects">
     {% assign projects = site.projects | sort: 'date' | reverse %}
     {% for project in projects %}
-        {%- include project-thumb.html -%}
+        {%- include portfolio-thumb.html -%}
     {% endfor %}
 </ul>

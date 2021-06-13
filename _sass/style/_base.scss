@@ -57,6 +57,10 @@ h1 {
   font-weight: 600;
 }
 
+a {
+  text-decoration: underline;
+}
+
 a:hover {
   color: $secondary-color;
 }
