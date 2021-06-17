@@ -4,7 +4,7 @@ title: Contra-Reforma
 permalink: contra-reforma
 date: October 2019
 collabs: AEFBAUL
-tags: [ 'Exhibition Curating','Graphic Design', 'Editorial Design' ]
+tags: [ 'Exhibition Curating','Graphic Design' ]
 thumbnail_path: contra.mp4
 description: Contra-reforma was an exhibition that showed the old and very interesting historic archive of the students' association of FBAUL.
 images:

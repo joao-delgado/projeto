@@ -13,8 +13,7 @@
             {% for item in site.data.data-footer %}
                 <li>
                     <a href="{{ item.url }}" target="_blank" title="Check my {{ item.title }}">
-                    <svg alt="{{ item.title }} logo" viewBox="0 0 40 40">{{ item.icon_path }}</svg>
-                    {{ item.title }}</a></li> 
+                    <svg alt="{{ item.title }} logo" viewBox="0 0 40 40">{{ item.icon_path }}</svg>{{ item.title }}</a></li> 
             {% endfor %}
         </ul>
     </div>

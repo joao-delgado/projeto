@@ -58,9 +58,54 @@ $l-spacing: 40px;
   }
 }
 
+@mixin external-link {
+  a {
+    width: fit-content;
+    display: block;
+    margin-top: $m-spacing;
+    margin-bottom: $l-spacing;
+    position: relative;
+    font-weight: 600;
+
+    &:hover::before {
+        border: solid $secondary-color;
+        border-width: 2px 2px 0px 0;
+    }
+
+    &:hover::after {
+        background-color: $secondary-color;
+    }
+  }
+
+  a::before {
+    content: '';
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    display: inline-block;
+    border: solid $primary-color;
+    border-width: 2px 2px 0px 0;
+    bottom: 0.2em;
+    right: -1.5em;
+  }
+
+  a::after {
+    content: '';
+    width: 1.2em;
+    height: 2px;
+    position: absolute;
+    bottom: 0.6em;
+    right: -1.6em;
+    transform: rotate(-45deg);
+    background-color: $primary-color;
+  }
+}
+
 @import 
     "style/base",
     "style/navigation",
     "style/footer",
     "style/home",
-    "style/portfolio";
+    "style/portfolio",
+    "style/project",
+    "style/drawings";
