@@ -11,8 +11,7 @@
             max-width: 200px;
         }
     }
-  }
-
+}
 
 .education {
     h3 {
@@ -26,6 +25,7 @@
 .skills-container {
     display: flex;
     flex-wrap: wrap;
+
     h4 {
         margin: 0;
     }
@@ -38,6 +38,7 @@
 .soft, 
 .hard {
     width: 100%;
+
     ul {
         padding-left: 10px;
         border-left: solid 2px $primary-color;
@@ -46,7 +47,8 @@
             font-weight: 600;
         }
     }
+    
     @media (min-width: 480px) {
         width: 50%;
-      }
+    }
 }

@@ -26,6 +26,7 @@ aside a {
   margin-top: $l-spacing;
   font-weight: 600;
   transition: margin-left 200ms ease-in-out;
+
   &::after {
     content: '';
     display: inline-block;
@@ -39,25 +40,25 @@ aside a {
 
   @media (min-width: 480px) {
     &:hover::after {
-        border: solid $secondary-color;
-        border-width: 2px 2px 0px 0;
+      border: solid $secondary-color;
+      border-width: 2px 2px 0px 0;
     }
 
     &:active {
-        margin-left: $s-spacing;
+      margin-left: $s-spacing;
     }
-}
+  }
 }
 
 .home-header {
     grid-area: header;
     border-bottom: solid 2px $primary-color;
   h1 {
-      font-size: $text-display;
-      position: relative;
-      width: max-content;
-      font-weight: 600;
-    }
+    font-size: $text-display;
+    position: relative;
+    width: max-content;
+    font-weight: 600;
+  }
     
   h1::before,
   h1::after {
@@ -84,32 +85,32 @@ aside a {
   }
 }
   
-  @keyframes typewriter {
-    to {
-      left: 100%;
-    }
+@keyframes typewriter {
+  to {
+    left: 100%;
   }
-  
-  @keyframes blink {
-    to {
-      background: transparent;
-    }
-  }
+}
 
-  .project-thumb {
-    display: block;
-    border-bottom: solid 2px $primary-color;
-    margin-bottom: $l-spacing;
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
 
-    @media (min-width: 600px) {
-      padding-right: $l-spacing;
-      padding-bottom: $l-spacing;
-      &:last-child {
-        border-bottom: 0;
-        margin-bottom: 0;
-      }
+.project-thumb {
+  display: block;
+  border-bottom: solid 2px $primary-color;
+  margin-bottom: $l-spacing;
+
+  @media (min-width: 600px) {
+    padding-right: $l-spacing;
+    padding-bottom: $l-spacing;
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
     }
   }
+}
 
 .project-thumbnails {
   max-width: 600px;
@@ -117,12 +118,14 @@ aside a {
   margin-bottom: $l-spacing;
 }  
 
-  .project-thumb-link {
-    display: flex;
-    @media (min-width: 600px) {
-      padding-right: $l-spacing;
-      &:hover {
-        outline: solid 2px $primary-color;
-      }
+.project-thumb-link {
+  display: flex;
+
+  @media (min-width: 600px) {
+    padding-right: $l-spacing;
+
+    &:hover {
+      outline: solid 2px $primary-color;
     }
   }
+}

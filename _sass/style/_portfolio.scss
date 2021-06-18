@@ -13,6 +13,7 @@
 
 .portfolio-tags {
     @include inline-list();
+    
     li {
         margin-bottom: $m-spacing;
         line-height: 1rem;

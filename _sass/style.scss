@@ -1,14 +1,8 @@
-@function ratio($width, $height) {
-    $ze: $height / $width;
-    @return percentage($ze);
-  }
-
 $bg-color: #fff;
 $primary-color: #00f;
 $secondary-color: #f00;
 
 $text-font: 'IBM Plex Mono', monospace;
-
 $text-display: 3rem;
 $text-h1: 2rem;
 $text-h2: 1.5rem;
@@ -17,12 +11,12 @@ $text-body-l: 1.2rem;
 $text-body-m: 1rem;
 $text-body-s: 0.8rem;
 
-$typewriterSpeed: 4s;
-$typewriterCharacters: 12;
-
 $s-spacing: 10px;
 $m-spacing: 20px;
 $l-spacing: 40px;
+
+$typewriterSpeed: 4s;
+$typewriterCharacters: 12;
 
 @mixin inline-list {
   display: flex;
@@ -37,7 +31,7 @@ $l-spacing: 40px;
   }
 
   li:last-child {
-      margin-right: 0px;
+    margin-right: 0px;
   }
 
   li::after {
@@ -68,12 +62,12 @@ $l-spacing: 40px;
     font-weight: 600;
 
     &:hover::before {
-        border: solid $secondary-color;
-        border-width: 2px 2px 0px 0;
+      border: solid $secondary-color;
+      border-width: 2px 2px 0px 0;
     }
 
     &:hover::after {
-        background-color: $secondary-color;
+      background-color: $secondary-color;
     }
   }
 
@@ -102,11 +96,11 @@ $l-spacing: 40px;
 }
 
 @import 
-    "style/base",
-    "style/navigation",
-    "style/footer",
-    "style/home",
-    "style/portfolio",
-    "style/project",
-    "style/drawings", 
-    "style/about";
+  "style/base",
+  "style/navigation",
+  "style/footer",
+  "style/home",
+  "style/portfolio",
+  "style/project",
+  "style/drawings", 
+  "style/about";
