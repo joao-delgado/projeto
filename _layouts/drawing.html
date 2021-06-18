@@ -4,12 +4,28 @@ layout: default
 <div class="drawings-container">
   <header class="drawings-header">
     <h1>{{ page.title | escape }}</h1>
-    <p>These drawing series are a part of a project called "Estorvo" that consists of visual experimentations using only black ink on a piece of paper.</p>
+    {{ content }}
     <a href="{{ page.estorvo_link }}" target="_blank" title="Go to Estorvo">Check Estorvo on Instagram</a>
   </header>
   {% if page.content %}
     <div class="drawings-content">
-      {{ content }}
+      {% assign drawings = site.drawings | sort: 'date' | reverse %}
+      {% for drawing in drawings %}
+        <div class="drawing">
+          <div class="drawing-info">
+            <h2>{{ drawing.title }}</h2>
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ drawing.date | date: date_format }}
+              </time>
+              {{ drawing.content }}
+            {% if drawing.inspired %}
+              <p class="inspired">Inspired by: {{ drawing.inspired }}</p>
+            {% endif %}
+          </div>
+          <img src="{{ drawing.image_path }}" alt="{{ drawing.title }}" class="drawing-img"/>
+        </div>
+      {% endfor %}
     </div>
   {% endif %}
 </div>
