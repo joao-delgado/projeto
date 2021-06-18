@@ -1,5 +1,41 @@
 .drawings-header {
     margin-bottom: $l-spacing;
-    padding-bottom: $l-spacing;
     border-bottom: solid 2px $primary-color;
+    @include external-link;
+}
+
+.drawings-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drawing {
+    width: 100%;
+    margin-bottom: $m-spacing;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    time {
+        font-size: $text-body-s;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+
+    @media (min-width: 600px) {
+      width: 50%;
+      padding: $s-spacing;
+
+      .drawing-info {
+        height: 150px;
+        }   
+    }
+}
+
+.inspired {
+    font-size: $text-body-s;
 }

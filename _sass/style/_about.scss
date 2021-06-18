@@ -1,0 +1,52 @@
+.about-me, 
+.education {
+    margin-bottom: $l-spacing;
+    padding-bottom: $l-spacing;
+    border-bottom: solid 2px $primary-color;
+}
+
+@media (min-width: 480px) {
+    .about-me {
+        figure {
+            max-width: 200px;
+        }
+    }
+  }
+
+
+.education {
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        margin-top: 0;
+    }
+}
+
+.soft, 
+.hard {
+    width: 100%;
+    ul {
+        padding-left: 10px;
+        border-left: solid 2px $primary-color;
+
+        h4 {
+            font-weight: 600;
+        }
+    }
+    @media (min-width: 480px) {
+        width: 50%;
+      }
+}

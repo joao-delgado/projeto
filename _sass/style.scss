@@ -91,7 +91,7 @@ $l-spacing: 40px;
 
   a::after {
     content: '';
-    width: 1.2em;
+    width: 1.1em;
     height: 2px;
     position: absolute;
     bottom: 0.6em;
@@ -108,4 +108,5 @@ $l-spacing: 40px;
     "style/home",
     "style/portfolio",
     "style/project",
-    "style/drawings";
+    "style/drawings", 
+    "style/about";

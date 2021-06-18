@@ -6,7 +6,7 @@
 }
 
 .portfolio-thumb {
-    @media (min-width: 480px) {
+    @media (min-width: 600px) {
         width: 33.333333%;
     }
 }
@@ -14,12 +14,11 @@
 .portfolio-tags {
     @include inline-list();
     li {
-
         margin-bottom: $m-spacing;
         line-height: 1rem;
     }
 }
 
 .portfolio-proj-desc {
-    padding: $s-spacing
+    padding: $s-spacing;
 }

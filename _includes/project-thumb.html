@@ -1,11 +1,9 @@
-<li>
-    <div class="project-thumb">
-        <h3><a href="{{ project.permalink }}" title="Go to {{ project.title }}">{{ project.title }}</a></h3>
-        <p>{{ project.description }}</p>
-        <a href="{{ project.permalink }}">
-            <video class="project-thumbnails" width="100%" autoplay loop muted>
-                <source src="assets/images/projects/thumbs/{{ project.thumbnail_path }}" type="video/mp4">
-            </video>
-        </a>
-    </div>
+<li class="project-thumb">
+    <h3><a href="{{ project.permalink }}" title="Go to {{ project.title }}">{{ project.title }}</a></h3>
+    <p>{{ project.description }}</p>
+    <a href="{{ project.permalink }}" title="Go to {{ project.title }}" class="project-thumb-link">
+        <video class="project-thumbnails" width="100%" autoplay loop muted>
+            <source src="assets/images/projects/thumbs/{{ project.thumbnail_path }}" type="video/mp4">
+        </video>
+    </a>
 </li>

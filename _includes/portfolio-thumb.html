@@ -5,8 +5,8 @@
         <li>{{ tag }}</li>
         {% endfor %}
     </ul>
-    <a href="{{ project.permalink }}">
-        <video class="project-thumbnails" width="100%" autoplay loop muted>
+    <a href="{{ project.permalink }}" class="portfolio-thumb-link">
+        <video width="100%" autoplay loop muted>
             <source src="assets/images/projects/thumbs/{{ project.thumbnail_path }}" type="video/mp4">
         </video>
     </a>
